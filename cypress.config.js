@@ -5,7 +5,11 @@ module.exports = defineConfig({
 
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('fail', (error, runnable) => {
+        console.error('Test failed with the following message:', error.message);
+        console.log('Novo informe pode estar disponível!');
+        throw error; 
+      });
     },
   },
 });
