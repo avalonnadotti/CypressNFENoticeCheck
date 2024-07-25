@@ -5,6 +5,8 @@ describe('Primeira stack de testes não guiada', ()=>{
         cy.visit('https://www.nfe.fazenda.gov.br/portal/informe.aspx?ehCTG=false', {
         
         })
-        cy.get('.divInforme a').first().should('have.attr', 'name', '1290')
+        cy.get('.divInforme a')
+            .first()
+            .should('have.attr', 'name', '1290')
     })
 })
