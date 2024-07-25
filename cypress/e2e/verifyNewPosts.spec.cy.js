@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 
-describe('Primeira stack de testes não guiada', ()=>{
-    it('Visita site da SEFAZ', () => {
+describe('Now I can check new alerts on nfe.fazenda portal', ()=>{
+    it('Verify new NF-e alerts', () => {
         cy.visit('https://www.nfe.fazenda.gov.br/portal/informe.aspx?ehCTG=false', {
         
         })
         cy.get('.divInforme a')
             .first()
-            .should('have.attr', 'name', '1290')
+            .should('have.attr', 'name', '1291')
     })
 })
